@@ -1,0 +1,75 @@
+{
+  "data_version": "Elliptic++ 交易子集（手动下载 archive.zip）",
+  "nodes": 203769,
+  "edges": 234355,
+  "feature_dim": 166,
+  "columns_note": "文件 167 列 = txId + 166 维特征（其中第 1 维为时间步 1–49）",
+  "labels": {
+    "illicit": 4545,
+    "licit": 42019,
+    "unknown": 157205
+  },
+  "time_split": {
+    "train_steps": [
+      1,
+      29
+    ],
+    "val_steps": [
+      30,
+      34
+    ],
+    "test_steps": [
+      35,
+      49
+    ],
+    "train": {
+      "nodes": 26381,
+      "illicit": 2871,
+      "licit": 23510,
+      "pos_rate": 0.108828
+    },
+    "val": {
+      "nodes": 3513,
+      "illicit": 591,
+      "licit": 2922,
+      "pos_rate": 0.168232
+    },
+    "test": {
+      "nodes": 16670,
+      "illicit": 1083,
+      "licit": 15587,
+      "pos_rate": 0.064967
+    },
+    "cross_period_edges": 0,
+    "edges_by_period": {
+      "0": 140223,
+      "1": 16620,
+      "2": 77512
+    }
+  },
+  "random_split": {
+    "ratio": "70/15/15",
+    "seed": 42,
+    "train": {
+      "nodes": 32594,
+      "illicit": 3181,
+      "licit": 29413,
+      "pos_rate": 0.097595
+    },
+    "val": {
+      "nodes": 6985,
+      "illicit": 682,
+      "licit": 6303,
+      "pos_rate": 0.097638
+    },
+    "test": {
+      "nodes": 6985,
+      "illicit": 682,
+      "licit": 6303,
+      "pos_rate": 0.097638
+    },
+    "cross_split_edges": 33790
+  },
+  "assertions_passed": true,
+  "output": "F:\\GNN金融欺诈识别实验\\exp03_elliptic\\data\\processed\\elliptic_pyg.pt"
+}

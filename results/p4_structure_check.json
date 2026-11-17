@@ -1,0 +1,25 @@
+{
+  "shape": [
+    203769,
+    4
+  ],
+  "columns": [
+    "log1p_degree",
+    "log1p_in_degree",
+    "log1p_out_degree",
+    "log1p_two_hop"
+  ],
+  "mean": [
+    1.063599944114685,
+    0.5812000036239624,
+    0.67330002784729,
+    2.4442999362945557
+  ],
+  "median": [
+    1.0986000299453735,
+    0.6930999755859375,
+    0.6930999755859375,
+    1.9458999633789062
+  ],
+  "output": "F:\\GNN金融欺诈识别实验\\exp03_elliptic\\data\\processed\\structure_features.npy"
+}

@@ -1,0 +1,110 @@
+{
+  "dataset": {
+    "nodes": 203769,
+    "edges": 234355,
+    "labeled": {
+      "illicit": 4545,
+      "licit": 42019,
+      "total": 46564
+    },
+    "time_step_range": [
+      1,
+      49
+    ]
+  },
+  "graph": {
+    "components": 49,
+    "components_spanning_multiple_time_steps": 0,
+    "largest_component_size": 7880,
+    "largest_component_share": 0.038671,
+    "illicit_in_own_timestep_largest_component": 1.0,
+    "isolated_nodes": 0,
+    "degree": {
+      "all": {
+        "mean": 2.3002,
+        "median": 2.0,
+        "p95": 4.0,
+        "max": 473
+      },
+      "illicit": {
+        "mean": 2.0117,
+        "median": 1.0,
+        "p95": 3.0,
+        "isolated_ratio": 0.0
+      },
+      "licit": {
+        "mean": 3.0952,
+        "median": 2.0,
+        "p95": 8.0,
+        "isolated_ratio": 0.0
+      },
+      "unique_neighbor_median_illicit": 1.0,
+      "unique_neighbor_median_licit": 2.0
+    }
+  },
+  "neighbor_purity": {
+    "illicit_pooled_purity": 0.540628,
+    "illicit_per_node_mean": 0.509662,
+    "illicit_per_node_median": 0.5,
+    "illicit_with_labeled_neighbor_ratio": 0.546535,
+    "illicit_labeled_neighbor_links": 3692,
+    "licit_neighbor_illicit_share": 0.024383,
+    "baseline_illicit_rate": 0.097608
+  },
+  "two_hop": {
+    "illicit": {
+      "mean": 20.1855,
+      "median": 7.0,
+      "p95": 70.0
+    },
+    "licit": {
+      "mean": 34.1143,
+      "median": 8.0,
+      "p95": 134.0
+    },
+    "median_ratio": 1.1429
+  },
+  "checks": {
+    "illicit_count": {
+      "value": 4545,
+      "criterion": "文档期望约 454（官方口径 4,545）；判据：<100 视为标注异常",
+      "passed": true
+    },
+    "illicit_median_degree": {
+      "value": 1.0,
+      "criterion": ">= 2",
+      "passed": false,
+      "blocking": false,
+      "decision": "用户裁定（2026-11-17）：如实记录、不作阻断；正类多为 1 度叶节点，但全图孤立节点为 0",
+      "note": "正类中度数为 1 的占 54.3%，但全图孤立节点为 0 个"
+    },
+    "isolated_ratio": {
+      "value": 0.0,
+      "criterion": "全图 <= 5%（>5% 需记录并评估影响）",
+      "passed": true
+    },
+    "illicit_in_timestep_largest_component": {
+      "value": 1.0,
+      "criterion": ">= 0.95（按所属时间步内最大分量；原全图口径不适用）",
+      "passed": true,
+      "note": "全图恰好 49 个连通分量、无跨时间步的边（最大分量仅占全图 3.87%），故按时间步口径评估；用户已确认（2026-11-17）"
+    },
+    "illicit_neighbor_purity": {
+      "pooled_purity": 0.540628,
+      "baseline_illicit_rate": 0.097608,
+      "lift": 5.5388,
+      "binom_p_value": 0.0,
+      "criterion": "显著高于全图 illicit 基线率",
+      "passed": true
+    },
+    "two_hop_size_ratio": {
+      "median_illicit": 7.0,
+      "median_licit": 8.0,
+      "ratio": 1.1429,
+      "criterion": "< 3",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "conclusion_zh": "正类 4545 个，1 跳已标注邻居中 illicit 占 54.1%，为基线 9.8% 的 5.5 倍（p=0.0e+00）；2 跳邻域中位数正/负类 7 vs 8（1.14 倍）；全图 0 孤立节点，49 个分量对应 49 个时间步，正类在所属时间步最大分量内覆盖 100%。结构携带信号，可进入建模；正类度数中位数 1 已如实记录。"
+}

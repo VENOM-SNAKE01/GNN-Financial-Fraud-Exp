@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "trial_written": true,
+    "resume_skips_done": true,
+    "ckpt_reload_reproduce": true,
+    "val_only_no_test": true
+  },
+  "passed": true,
+  "trial_row": "GCN,0,\"{\"\"lr\"\": 0.0003, \"\"hidden\"\": 128, \"\"layers\"\": 2, \"\"dropout\"\": 0.3, \"\"weight_decay\"\": 0.0}\",0.255679,[0.255679],3,3,1.3,1540.0,104321,ok",
+  "ckpt_val_ap": 0.473842,
+  "reproduced_val_ap": 0.476069,
+  "reproduce_delta": 0.002227,
+  "note": "GCN 全图消息传递含非确定性 scatter，复算 AP 允许 <0.02 的数值差异"
+}

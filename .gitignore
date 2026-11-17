@@ -5,6 +5,8 @@ data/processed/
 # 训练产物
 results/checkpoints/
 results/logs/
+results/*.db
+results/*.db-journal
 
 # Python
 .venv/

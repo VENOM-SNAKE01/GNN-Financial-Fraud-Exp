@@ -1,0 +1,49 @@
+{
+  "files": {
+    "elliptic_txs_features.csv": {
+      "lines": 203769,
+      "has_header": false,
+      "data_rows": 203769,
+      "expected_data_rows": 203769,
+      "deviation_pct": 0.0,
+      "n_columns": 167
+    },
+    "elliptic_txs_classes.csv": {
+      "lines": 203770,
+      "has_header": true,
+      "data_rows": 203769,
+      "expected_data_rows": 203769,
+      "deviation_pct": 0.0,
+      "n_columns": 2
+    },
+    "elliptic_txs_edgelist.csv": {
+      "lines": 234356,
+      "has_header": true,
+      "data_rows": 234355,
+      "expected_data_rows": 234355,
+      "deviation_pct": 0.0,
+      "n_columns": 2
+    }
+  },
+  "labels": {
+    "total": 203769,
+    "counts": {
+      "illicit": 4545,
+      "licit": 42019,
+      "unknown": 157205
+    },
+    "share": {
+      "illicit": 0.022305,
+      "licit": 0.206209,
+      "unknown": 0.771486
+    },
+    "doc_expected": {
+      "licit": 4203,
+      "illicit": 454,
+      "unknown": 157205
+    },
+    "note": "classes.csv 取值为 1=illicit / 2=licit / unknown；文档 P2 的 454 / 4,203 疑为笔误，官方口径为 4,545 / 42,019（合计 203,769，与 P3 断言一致）"
+  },
+  "warnings": [],
+  "passed": true
+}
