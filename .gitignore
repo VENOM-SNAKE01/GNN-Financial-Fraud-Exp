@@ -1,0 +1,17 @@
+# 数据（体积大，不入库）
+data/raw/
+data/processed/
+
+# 训练产物
+results/checkpoints/
+results/logs/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 系统
+.DS_Store
+Thumbs.db
